@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.statusbarvirtualkey.statusbarvirtualkey.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/home_title"
+            layout="@layout/layout_home_title" />
+
+        <FrameLayout
+            android:id="@+id/home_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="70dp"
+            android:layout_above="@+id/line_bottom"
+            android:layout_weight="1"
+            >
+        </FrameLayout>
+
+        <View
+            android:id="@+id/line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:alpha="0.6"
+            android:layout_above="@+id/bottom_navigation_view"
+            android:background="@android:color/darker_gray"
+            />
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            app:itemBackground="@android:color/white"
+            app:elevation="2dp"
+            app:itemTextColor="@color/selector_item_color"
+            app:itemIconTint="@color/selector_item_color"
+            app:menu="@menu/navigation_menu"
+            >
+
+        </android.support.design.widget.BottomNavigationView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
